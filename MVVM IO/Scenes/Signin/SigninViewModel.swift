@@ -17,7 +17,6 @@ protocol SigninViewModelInputs {
 protocol SigninViewModelOutputs {
     var isEmailValid: PublishRelay<TextFieldStatus> { get }
     var isPasswordValid: PublishRelay<TextFieldStatus> { get }
-    var isAuthValid: PublishRelay<TextFieldStatus> { get }
     var emailNotValidErrMssg: PublishRelay<String> { get }
     var passwordNotValidErrMssg: PublishRelay<String> { get }
 }
@@ -34,7 +33,6 @@ class SigninViewModel: SigninViewModelTypes, SigninViewModelOutputs, SigninViewM
 
     var isEmailValid: PublishRelay<TextFieldStatus> = PublishRelay()
     var isPasswordValid: PublishRelay<TextFieldStatus> = PublishRelay()
-    var isAuthValid: PublishRelay<TextFieldStatus> = PublishRelay()
     var emailNotValidErrMssg: PublishRelay<String> = PublishRelay()
     var passwordNotValidErrMssg: PublishRelay<String> = PublishRelay()
 
